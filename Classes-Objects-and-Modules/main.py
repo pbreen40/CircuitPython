@@ -2,7 +2,7 @@ import time
 import board
 from rgb import RGB   # import the RGB class from the rgb module
 
-r1 = board.D3
+r1 = board.D3 #sets all pins up
 g1 = board.D4
 b1 = board.D5
 r2 = board.D1

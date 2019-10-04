@@ -18,24 +18,24 @@ lcd = LCD(I2CPCF8574Interface(0x27), num_rows=2, num_cols=16)
 presses = 0
 fread = True
 while True:
-    lcd.set_cursor_pos(0, 0)
+    lcd.set_cursor_pos(0, 0) #sets cursor in proper position
     lcd.print("SwitchState:")
     if switch.value:
-        fread = True
+        fread = True #logic so it doesn't repeat
     else:
         if fread == True:
             if switch2.value:
                 lcd.print("Up")
-                lcd.print("    ")
+                lcd.print("    ") #spacer so it doesn't break
                 presses +=1
-                fread = not fread
+                fread = not fread #resets fread
             else:
                 lcd.print("Down")
                 lcd.print("    ")
                 presses -=1
-                fread = not fread
-    lcd.set_cursor_pos(1, 0)
+                fread = not fread #resets fread
+    lcd.set_cursor_pos(1, 0) #print everything needed
     lcd.print("Presses:")
-    lcd.print(str(presses))
+    lcd.print(str(presses))#converts to string so it doesn't throw errors
     lcd.print("    ")
     lcd.cursor = False

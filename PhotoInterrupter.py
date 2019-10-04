@@ -5,16 +5,16 @@ switch = DigitalInOut(board.D2)
 switch.direction = Direction.INPUT
 switch.pull = Pull.UP
 presses = 0
-fread = True
-lread = True
-initial = time.monotonic()
+fread = True 
+lread = True #variables used in logic
+initial = time.monotonic() #sets initial time
 while True:
-    now = time.monotonic()
-    if now - initial == 4:  # If 3 milliseconds elapses
+    now = time.monotonic() #sets current time
+    if now - initial == 4:  # If 4 elapses
         print("I have been interrupted", presses, "times.")
-        initial = time.monotonic()
+        initial = time.monotonic() #resets initial
 
-    if switch.value:
+    if switch.value: #logic so it doesn't repeat
         lread = True
 
     else:
