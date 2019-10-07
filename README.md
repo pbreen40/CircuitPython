@@ -1,7 +1,7 @@
 # CircuitPython
 ## My CircuitPython assignments
 
-### LCDFade:
+### LEDFade:
 #### Objective
 Make a LED fades in and out.
 #### Picture
@@ -9,6 +9,8 @@ Make a LED fades in and out.
 #### Lessons
 In this assignment we learned how to use our new metro board and how to use CircuitPython on Mu.
 
+
+  
 
 ### ServoTouch:
 #### Objective
@@ -71,3 +73,20 @@ Used classes and objects to control 6 LEDS with 4 functions.
 
 #### Lessons
 In this assignment we learned how to use classes and objects on Hello Vs Code to control LEDs. We orignally had 6 different variables for pins, but we figured out how to make it so each function controls them seperately with just three. 
+#### Important Code
+`FancyLED.py`
+``` python
+     def __init__(self, p1, p2, p3):
+        self.fancy1 = digitalio.DigitalInOut(p1) #sets temp values for p1/2/3
+        self.fancy2 = digitalio.DigitalInOut(p2)
+        self.fancy3 = digitalio.DigitalInOut(p3)
+        self.fancy1.direction = digitalio.Direction.OUTPUT #defines them as outputs
+        self.fancy2.direction = digitalio.Direction.OUTPUT
+        self.fancy3.direction = digitalio.Direction.OUTPUT  
+```
+`FancyLEDMain.py (main.py)`
+```python
+fancy1 = fancyled(board.D2,board.D3,board.D4) #defines different pins for each function
+fancy2 = fancyled(board.D5,board.D6,board.D7)
+```
+This is the part of the code that that lets us shorten six LED variables to 3 LEDs, it uses "fancy1" and "fancy2" instead of just "fancy."
