@@ -34,6 +34,7 @@ Our variable counts up, but once it reaches 6000, it multiplies it by a negative
 A Servo moves right or left, depending on if a wire is touched, using Capacitive Touch.
 #### Picture
 <img src="media/Wiringforservotouch.png" width="392px"/>
+
 #### Lessons
 In this assignment we learned how to use Capacitive touch, and how to control servos CircuitPython. When you touch one of the wires, your finger discharges to it, which lets the Metro know that you touched it.  
 #### Important Code
@@ -52,7 +53,9 @@ In this assignment we learned how to use Capacitive touch, and how to control se
     time.sleep(0.1)
 ```
 We called our servo "moth_slippers," when one wire was touched we set the throttle to a postive speed and if the other was touched it was set to a negative speed. 
+
 ### LCDButtonSwitch:
+
 #### Objective
 A switch determines if a counter is increased, or decreased when a button is pushed. The counter is displayed on a LCD screen.
 #### Picture
@@ -60,7 +63,9 @@ A switch determines if a counter is increased, or decreased when a button is pus
 
 #### Lessons
 In this assignment we learned how to use LCD screens and switches / buttons on CircuitPython. We had to make two boolean variables along with some logic that made sure the button wouldn't count more than once if it was held down. We also had an issue with the LCD glitching sometimes, so we had it print nothing to reset it.  
+
 #### Important Code
+
 `LCDButton.py`
 ``` python
 fread = True
@@ -87,7 +92,6 @@ Above is the logic to see if the button is being held down, and if it is, it mak
 ### PhotoInterrupter:
 #### Objective
 Every 4 seconds, the number of times the photo interrupter has been interrupted is displayed.
-#### Picture
 
 #### Lessons
 In this assignment we learned how to use photointerrupters on CircuitPython. We used the same logic as in the LCD Button switch to make sure that it wouldn't count more than once when it was interuppted. We also found out how similiar a photo interuppter and a button are coded. 
