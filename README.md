@@ -59,7 +59,7 @@ We called our servo "moth_slippers," when one wire was touched we set the thrott
 #### Objective
 A switch determines if a counter is increased, or decreased when a button is pushed. The counter is displayed on a LCD screen.
 #### Picture
-<img src="Media/WiringforLCDButtonSwitch.png" width="392"/>
+<img src="Media/WiringForLCDButtonSwitch.png" width="392"/>
 
 #### Lessons
 In this assignment we learned how to use LCD screens and switches / buttons on CircuitPython. We had to make two boolean variables along with some logic that made sure the button wouldn't count more than once if it was held down. We also had an issue with the LCD glitching sometimes, so we had it print nothing to reset it.  
